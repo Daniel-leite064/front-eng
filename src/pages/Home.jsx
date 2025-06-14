@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Header } from "../components/Header.jsx";
 
-
 const COLOR_PALETTE = {
   primary: "#10b981",
   secondary: "#ec4899",
