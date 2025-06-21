@@ -20,7 +20,7 @@ export function Home() {
 
   useEffect(() => {
     const getPosts = async () => {
-      const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+      const response = await fetch("https://front-eng-api.onrender.com/posts");
       const data = await response.json();
       setPosts(data);
     };
@@ -54,13 +54,13 @@ export function Home() {
               className="text-4xl md:text-5xl font-bold mb-5 tracking-tight"
               style={{ color: COLOR_PALETTE.darkText }}
             >
-              Blog Moderno
+              Insights Aleatórios
             </h1>
             <p
               className="text-xl max-w-2xl mx-auto"
               style={{ color: COLOR_PALETTE.lightText }}
             >
-              Conteúdo relevante e atualizado para você se inspirar
+              Descubra pensamentos e ideias geradas aleatoriamente
             </p>
           </div>
 
@@ -146,7 +146,7 @@ export function Home() {
                     className="leading-relaxed mb-8 text-lg"
                     style={{ color: COLOR_PALETTE.darkText }}
                   >
-                    {selectedPost.body}
+                    {selectedPost.content}
                   </p>
 
                   <div className="flex space-x-2">
@@ -223,7 +223,7 @@ export function Home() {
                     className="leading-relaxed mb-7"
                     style={{ color: COLOR_PALETTE.darkText }}
                   >
-                    {post.body.length > 100 ? post.body.slice(0, 100) + "..." : post.body}
+                    {post.excerpt}
                   </p>
 
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">

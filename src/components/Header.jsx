@@ -28,7 +28,7 @@ export function Header({ colorPalette = {} }) {
               className="text-xl font-bold"
               style={{ color: palette.darkText }}
             >
-              Blog Moderno
+              Insights<span style={{ color: colorPalette.primary }}>Aleatórios</span>
             </span>
           </div>
           
